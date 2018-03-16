@@ -1,0 +1,64 @@
+{
+  "deviceTypes": [
+    {
+      "id": "simDeviceType",
+      "running": false,
+      "events": [
+        {
+          "id": "event_1",
+          "frequency": {
+            "repeat": "6",
+            "every": "minute"
+          },
+          "json": "{\n  \"d\": {\n    \"temp\": random(0, 100),\n    \"humidity\": random(50, 100)\n  }\n}"
+        }
+      ],
+      "devices": [
+        {
+          "id": "simDevice_1",
+          "generated": true,
+          "eventOverrides": [
+            {
+              "id": "event_1",
+              "frequency": {
+                "repeat": "6",
+                "every": "minute"
+              },
+              "json": "{\n  \"d\": {\n    \"temp\": random(0, 100),\n    \"humidity\": random(50, 100)\n  }\n}"
+            }
+          ]
+        },
+        {
+          "id": "simDevice_2",
+          "generated": true,
+          "eventOverrides": [
+            {
+              "id": "event_1",
+              "frequency": {
+                "repeat": "6",
+                "every": "minute"
+              },
+              "json": "{\n  \"d\": {\n    \"temp\": random(0, 100),\n    \"humidity\": random(50, 100)\n  }\n}"
+            }
+          ]
+        },
+        {
+          "id": "simDevice_3",
+          "generated": true,
+          "eventOverrides": [
+            {
+              "id": "event_1",
+              "frequency": {
+                "repeat": "6",
+                "every": "minute"
+              },
+              "json": "{\n  \"d\": {\n    \"temp\": random(0, 100),\n    \"humidity\": random(50, 100)\n  }\n}"
+            }
+          ],
+          "running": true
+        }
+      ]
+    }
+  ],
+  "APIKey": "a-p99oh5-mllseblu3r"
+}

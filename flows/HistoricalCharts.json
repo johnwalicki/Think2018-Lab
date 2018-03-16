@@ -1,0 +1,910 @@
+[
+    {
+        "id": "fd5007d2.149128",
+        "type": "tab",
+        "label": "Historical Chart",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "e730161a.49e96",
+        "type": "tab",
+        "label": "Advanced Historical Chart",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "ad8c3007.6e25a8",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#1bbfff",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#0094ce",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "562ef1af.57f6d8",
+        "type": "ui_tab",
+        "z": "",
+        "name": "Sim IoT Data Chart",
+        "icon": "dashboard",
+        "order": 3
+    },
+    {
+        "id": "23b183f1.8a1aec",
+        "type": "ui_tab",
+        "z": "",
+        "name": "Chart Examples",
+        "icon": "fa-area-chart",
+        "order": 1
+    },
+    {
+        "id": "d8d21669.3ad148",
+        "type": "ui_tab",
+        "z": "",
+        "name": "Sim IoT Data Chart",
+        "icon": "dashboard",
+        "order": 3
+    },
+    {
+        "id": "a2191a2.5fc8f68",
+        "type": "ui_group",
+        "z": "",
+        "name": "Historical Data",
+        "tab": "3856714c.b6f6de",
+        "order": 1,
+        "disp": true,
+        "width": "18"
+    },
+    {
+        "id": "b29561aa.1ad5d",
+        "type": "ui_group",
+        "z": "",
+        "name": "Chart Controls",
+        "tab": "3856714c.b6f6de",
+        "order": 2,
+        "disp": true,
+        "width": "6"
+    },
+    {
+        "id": "3856714c.b6f6de",
+        "type": "ui_tab",
+        "z": "",
+        "name": "Historical Data",
+        "icon": "fa-area-chart",
+        "order": 5
+    },
+    {
+        "id": "bea15777.dc3cb8",
+        "type": "ui_group",
+        "z": "",
+        "name": "Historical Data",
+        "tab": "9eba420.acddec",
+        "order": 1,
+        "disp": true,
+        "width": "18"
+    },
+    {
+        "id": "8c85eddb.77aea8",
+        "type": "ui_group",
+        "z": "",
+        "name": "Chart Controls",
+        "tab": "9eba420.acddec",
+        "order": 2,
+        "disp": true,
+        "width": "6"
+    },
+    {
+        "id": "9eba420.acddec",
+        "type": "ui_tab",
+        "z": "",
+        "name": "Advanced Charts",
+        "icon": "fa-area-chart",
+        "order": 6
+    },
+    {
+        "id": "245b5ffe.8f90b",
+        "type": "debug",
+        "z": "fd5007d2.149128",
+        "name": "",
+        "active": true,
+        "console": "false",
+        "complete": "false",
+        "x": 910,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "83bb6a0a.b6ea7",
+        "type": "ui_chart",
+        "z": "fd5007d2.149128",
+        "name": "",
+        "group": "a2191a2.5fc8f68",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "label": "A Chart of Simulated Data",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": "10",
+        "removeOlderPoints": "5000",
+        "removeOlderUnit": "60",
+        "cutout": 0,
+        "useOneColor": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "useOldStyle": false,
+        "x": 960,
+        "y": 60,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "5f4d988d.83afa8",
+        "type": "function",
+        "z": "fd5007d2.149128",
+        "name": "Create a Chart Array for Chart.js",
+        "func": "// This function reformats the timeseries data into an array that \n// Chart.js (See http://www.chartjs.org/ ) will plot\n// The node-red-dashboard Chart node uses Chart.js \n\n// The Array has this structure, inserting the first element as a template.\nvar ChartData = [ {\"series\":[\"Data\"],\n                   \"data\":[[{\"x\":msg.payload[0].time,\"y\":msg.payload[0].data}]],\n                   \"labels\":[\"Data\"]}];\n\n// Start at 1 because we've already added element 0 in the initial array definition\nfor( var i=1; i < msg.payload.length; i++ ) {\n    ChartData[0].data[0].push( { \"x\":msg.payload[i].time,\"y\":msg.payload[i].data } );\n}\n// Now we need to sort on the time so that we give the Chart node an array in time order\nChartData[0].data[0].sort(function sortNumber(a,b) { return a.x - b.x; });\n\nmsg.payload = ChartData;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 630,
+        "y": 60,
+        "wires": [
+            [
+                "83bb6a0a.b6ea7",
+                "245b5ffe.8f90b"
+            ]
+        ]
+    },
+    {
+        "id": "d8190be0.761b2",
+        "type": "cloudant in",
+        "z": "fd5007d2.149128",
+        "name": "",
+        "cloudant": "",
+        "database": "historicaldata1",
+        "service": "cee-nodered-iot-chatbot-cloudantNoSQLDB",
+        "search": "_all_",
+        "design": "",
+        "index": "",
+        "x": 360,
+        "y": 60,
+        "wires": [
+            [
+                "c1a7ad3f.4880e8",
+                "5f4d988d.83afa8"
+            ]
+        ]
+    },
+    {
+        "id": "c1a7ad3f.4880e8",
+        "type": "debug",
+        "z": "fd5007d2.149128",
+        "name": "",
+        "active": true,
+        "console": "false",
+        "complete": "false",
+        "x": 570,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "fca9f008.c25cc8",
+        "type": "ui_button",
+        "z": "fd5007d2.149128",
+        "name": "",
+        "group": "b29561aa.1ad5d",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Load Simulated Data",
+        "color": "",
+        "bgcolor": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "",
+        "x": 140,
+        "y": 60,
+        "wires": [
+            [
+                "d8190be0.761b2"
+            ]
+        ]
+    },
+    {
+        "id": "adb5d8b4.3e2a2",
+        "type": "debug",
+        "z": "e730161a.49e96",
+        "name": "",
+        "active": true,
+        "console": "false",
+        "complete": "false",
+        "x": 1250,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "b3db39c9.4c5ca",
+        "type": "ui_chart",
+        "z": "e730161a.49e96",
+        "name": "",
+        "group": "bea15777.dc3cb8",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "label": "A Chart of Simulated DataSets",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": "10",
+        "removeOlderPoints": "5000",
+        "removeOlderUnit": "60",
+        "cutout": 0,
+        "useOneColor": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "useOldStyle": false,
+        "x": 1310,
+        "y": 260,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "6d12d37e.b50cb4",
+        "type": "function",
+        "z": "e730161a.49e96",
+        "name": "Create a Chart Array for Chart.js",
+        "func": "var starttime = flow.get(\"StartTime\");\nvar endtime   = flow.get(\"EndTime\");\nvar PlotSeries0   = flow.get(\"PlotSeries0\");\nvar PlotSeries1   = flow.get(\"PlotSeries1\"); // Switch can be True / False\nvar PlotSeries2   = flow.get(\"PlotSeries2\");\nvar Series0Data   = flow.get(\"Series0Data\");\nvar Series1Data   = flow.get(\"Series1Data\");\nvar Series2Data   = flow.get(\"Series2Data\");\n\n// Example Chart Data\n// [{\"series\":[\"A\",\"B\",\"C\"],\"data\":[[{\"x\":1504029632890,\"y\":5},{\"x\":1504029636001,\"y\":4}]],\"labels\":[\"\"]}]\n// The Array has this structure, inserting the first element as a template.\nvar ChartData = [  {\"series\":[\"Series0\",\"Series1\",\"Series2\"],\n                    \"data\":[\n                        [{\"x\":starttime,\"y\":0}],\n                        [{\"x\":starttime,\"y\":0}],\n                        [{\"x\":starttime,\"y\":0}]\n                    ],\n                    \"labels\":[\"Data 0\",\"Data 1\",\"Data 2\"]}];\n                    \n// Now that the json object is defined, remove the bogus first data {x,y} object.\n// This triggers an odd bug in node-red-dashboard chart however when data[0] array has zero elements.\nChartData[0].data[0].shift(); \nChartData[0].data[1].shift(); \nChartData[0].data[2].shift(); \n    \n    \nif( PlotSeries0 === true ) {\n    for( var i=0; i < Series0Data.length; i++ ) {\n        // Filter on the selected timestamp range\n        if( (Series0Data[i].time > starttime) && (Series0Data[i].time < endtime)) {\n            ChartData[0].data[0].push( { \"x\":Series0Data[i].time,\"y\":Series0Data[i].data } );\n        }\n    }\n    // Now we need to sort on the time so that we give the Chart node an array in time order\n    ChartData[0].data[0].sort(function sortNumber(a,b) { return a.x - b.x; });\n}\nif( PlotSeries1 === true ) {\n    for( var i=0; i < Series1Data.length; i++ ) {\n        // Filter on the selected timestamp range\n        if( (Series1Data[i].time > starttime) && (Series1Data[i].time < endtime)) {\n            ChartData[0].data[1].push( { \"x\":Series1Data[i].time,\"y\":Series1Data[i].data } );\n        }\n    }\n    // Now we need to sort on the time so that we give the Chart node an array in time order\n    ChartData[0].data[1].sort(function sortNumber(a,b) { return a.x - b.x; });\n}\nif( PlotSeries2 === true ) {\n    for( var i=0; i < Series2Data.length; i++ ) {\n        // Filter on the selected timestamp range\n        if( (Series2Data[i].time > starttime) && (Series2Data[i].time < endtime)) {\n            ChartData[0].data[2].push( { \"x\":Series2Data[i].time,\"y\":Series2Data[i].data } );\n        }\n    }\n    // Now we need to sort on the time so that we give the Chart node an array in time order\n    ChartData[0].data[2].sort(function sortNumber(a,b) { return a.x - b.x; });\n}\nmsg.payload = ChartData;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 1000,
+        "y": 280,
+        "wires": [
+            [
+                "b3db39c9.4c5ca",
+                "adb5d8b4.3e2a2"
+            ]
+        ]
+    },
+    {
+        "id": "9ceaf6c4.105508",
+        "type": "cloudant in",
+        "z": "e730161a.49e96",
+        "name": "",
+        "cloudant": "",
+        "database": "historicaldata1",
+        "service": "cee-nodered-iot-chatbot-cloudantNoSQLDB",
+        "search": "_all_",
+        "design": "",
+        "index": "",
+        "x": 520,
+        "y": 220,
+        "wires": [
+            [
+                "540a5506.aa730c"
+            ]
+        ]
+    },
+    {
+        "id": "f010246f.c38f48",
+        "type": "ui_date_picker",
+        "z": "e730161a.49e96",
+        "name": "",
+        "label": "Start Date",
+        "group": "8c85eddb.77aea8",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "topic": "",
+        "x": 500,
+        "y": 80,
+        "wires": [
+            [
+                "37f5a9f8.901c8e"
+            ]
+        ]
+    },
+    {
+        "id": "ce7d1ad8.856e3",
+        "type": "ui_date_picker",
+        "z": "e730161a.49e96",
+        "name": "",
+        "label": "End Date",
+        "group": "8c85eddb.77aea8",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "topic": "",
+        "x": 500,
+        "y": 120,
+        "wires": [
+            [
+                "8e9bd212.e3daa8"
+            ]
+        ]
+    },
+    {
+        "id": "2694c613.436faa",
+        "type": "comment",
+        "z": "e730161a.49e96",
+        "name": "Select Date Range",
+        "info": "",
+        "x": 310,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "1b3b1dbf.374542",
+        "type": "ui_text",
+        "z": "e730161a.49e96",
+        "group": "8c85eddb.77aea8",
+        "order": 4,
+        "width": "6",
+        "height": "2",
+        "name": "Blank text",
+        "label": "",
+        "format": "",
+        "layout": "row-spread",
+        "x": 500,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "f0e9170a.648f2",
+        "type": "debug",
+        "z": "e730161a.49e96",
+        "name": "",
+        "active": true,
+        "console": "false",
+        "complete": "false",
+        "x": 910,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "f5fc980a.634f28",
+        "type": "debug",
+        "z": "e730161a.49e96",
+        "name": "",
+        "active": true,
+        "console": "false",
+        "complete": "false",
+        "x": 910,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "7b26f5bf.d4f13c",
+        "type": "change",
+        "z": "e730161a.49e96",
+        "name": "Start Date - 03/14/2018",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "1520985600000",
+                "tot": "num"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 290,
+        "y": 80,
+        "wires": [
+            [
+                "f010246f.c38f48"
+            ]
+        ]
+    },
+    {
+        "id": "930015cb.30539",
+        "type": "change",
+        "z": "e730161a.49e96",
+        "name": "End Date - 03/24/2018",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "1521849600000",
+                "tot": "num"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 290,
+        "y": 120,
+        "wires": [
+            [
+                "ce7d1ad8.856e3"
+            ]
+        ]
+    },
+    {
+        "id": "37f5a9f8.901c8e",
+        "type": "change",
+        "z": "e730161a.49e96",
+        "name": "Set Start Time Range",
+        "rules": [
+            {
+                "t": "set",
+                "p": "StartTime",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 700,
+        "y": 80,
+        "wires": [
+            [
+                "f0e9170a.648f2"
+            ]
+        ]
+    },
+    {
+        "id": "8e9bd212.e3daa8",
+        "type": "change",
+        "z": "e730161a.49e96",
+        "name": "Set End Time Range",
+        "rules": [
+            {
+                "t": "set",
+                "p": "EndTime",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 700,
+        "y": 120,
+        "wires": [
+            [
+                "f5fc980a.634f28"
+            ]
+        ]
+    },
+    {
+        "id": "5c8ad596.b740d4",
+        "type": "inject",
+        "z": "e730161a.49e96",
+        "name": "",
+        "topic": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "x": 90,
+        "y": 100,
+        "wires": [
+            [
+                "7b26f5bf.d4f13c",
+                "930015cb.30539"
+            ]
+        ]
+    },
+    {
+        "id": "d3792950.55c12",
+        "type": "cloudant in",
+        "z": "e730161a.49e96",
+        "name": "",
+        "cloudant": "",
+        "database": "historicaldata2",
+        "service": "cee-nodered-iot-chatbot-cloudantNoSQLDB",
+        "search": "_all_",
+        "design": "",
+        "index": "",
+        "x": 520,
+        "y": 280,
+        "wires": [
+            [
+                "64d04fe2.5dfb58"
+            ]
+        ]
+    },
+    {
+        "id": "b272898c.e65ff",
+        "type": "cloudant in",
+        "z": "e730161a.49e96",
+        "name": "",
+        "cloudant": "",
+        "database": "historicaldata3",
+        "service": "cee-nodered-iot-chatbot-cloudantNoSQLDB",
+        "search": "_all_",
+        "design": "",
+        "index": "",
+        "x": 520,
+        "y": 340,
+        "wires": [
+            [
+                "934bd16f.7fdca"
+            ]
+        ]
+    },
+    {
+        "id": "38f2afe5.40ee98",
+        "type": "ui_switch",
+        "z": "e730161a.49e96",
+        "name": "",
+        "label": "Simulated Data #1",
+        "group": "8c85eddb.77aea8",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "Series0",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "x": 110,
+        "y": 220,
+        "wires": [
+            [
+                "87d5e991.589ea8"
+            ]
+        ]
+    },
+    {
+        "id": "50f02462.23a964",
+        "type": "ui_switch",
+        "z": "e730161a.49e96",
+        "name": "",
+        "label": "Simulated Data #2",
+        "group": "8c85eddb.77aea8",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "Series1",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "x": 110,
+        "y": 280,
+        "wires": [
+            [
+                "22b4e150.54c9b6"
+            ]
+        ]
+    },
+    {
+        "id": "885d0b5.e606778",
+        "type": "ui_switch",
+        "z": "e730161a.49e96",
+        "name": "",
+        "label": "Simulated Data #3",
+        "group": "8c85eddb.77aea8",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "x": 110,
+        "y": 340,
+        "wires": [
+            [
+                "d237e7c7.efd7e"
+            ]
+        ]
+    },
+    {
+        "id": "87d5e991.589ea8",
+        "type": "change",
+        "z": "e730161a.49e96",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "PlotSeries0",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 310,
+        "y": 220,
+        "wires": [
+            [
+                "9ceaf6c4.105508"
+            ]
+        ]
+    },
+    {
+        "id": "22b4e150.54c9b6",
+        "type": "change",
+        "z": "e730161a.49e96",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "PlotSeries1",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 310,
+        "y": 280,
+        "wires": [
+            [
+                "d3792950.55c12"
+            ]
+        ]
+    },
+    {
+        "id": "d237e7c7.efd7e",
+        "type": "change",
+        "z": "e730161a.49e96",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "PlotSeries2",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 310,
+        "y": 340,
+        "wires": [
+            [
+                "b272898c.e65ff"
+            ]
+        ]
+    },
+    {
+        "id": "540a5506.aa730c",
+        "type": "change",
+        "z": "e730161a.49e96",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "Series0Data",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 720,
+        "y": 220,
+        "wires": [
+            [
+                "6d12d37e.b50cb4"
+            ]
+        ]
+    },
+    {
+        "id": "64d04fe2.5dfb58",
+        "type": "change",
+        "z": "e730161a.49e96",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "Series1Data",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 720,
+        "y": 280,
+        "wires": [
+            [
+                "6d12d37e.b50cb4"
+            ]
+        ]
+    },
+    {
+        "id": "934bd16f.7fdca",
+        "type": "change",
+        "z": "e730161a.49e96",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "Series2Data",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 720,
+        "y": 340,
+        "wires": [
+            [
+                "6d12d37e.b50cb4"
+            ]
+        ]
+    }
+]
