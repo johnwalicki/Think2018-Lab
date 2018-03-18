@@ -1,15 +1,15 @@
 [
     {
-        "id": "d0081a62.9152b8",
+        "id": "4f5afa8a.0adccc",
         "type": "tab",
         "label": "Simulated Device Chart",
         "disabled": false,
         "info": ""
     },
     {
-        "id": "de640a35.5e63a8",
+        "id": "43df6cfa.efbd54",
         "type": "ibmiot in",
-        "z": "d0081a62.9152b8",
+        "z": "4f5afa8a.0adccc",
         "authentication": "boundService",
         "apiKey": "",
         "inputType": "evt",
@@ -29,22 +29,21 @@
         "allCommands": "",
         "allFormats": "",
         "qos": 0,
-        "x": 108,
-        "y": 152,
+        "x": 90,
+        "y": 220,
         "wires": [
             [
-                "ada58bc1.77b9d8",
-                "8a7de35f.e9b8e",
-                "ac317282.ff5738",
-                "b16aa8aa.80ba38",
-                "595d3a3f.545674"
+                "86b2846e.6d612",
+                "ca379da7.239608",
+                "b195e775.d8337",
+                "aff92fff.d3c28"
             ]
         ]
     },
     {
-        "id": "ada58bc1.77b9d8",
+        "id": "86b2846e.6d612",
         "type": "debug",
-        "z": "d0081a62.9152b8",
+        "z": "4f5afa8a.0adccc",
         "name": "",
         "active": false,
         "tosidebar": true,
@@ -56,11 +55,11 @@
         "wires": []
     },
     {
-        "id": "d91f6ac9.ba3848",
+        "id": "c337fffa.9ff0f8",
         "type": "ui_chart",
-        "z": "d0081a62.9152b8",
+        "z": "4f5afa8a.0adccc",
         "name": "",
-        "group": "ca0c354e.66194",
+        "group": "2a929492.960314",
         "order": 4,
         "width": 0,
         "height": 0,
@@ -98,11 +97,11 @@
         ]
     },
     {
-        "id": "a1b4470.f9f37b8",
+        "id": "83bf92da.12e9f",
         "type": "ui_chart",
-        "z": "d0081a62.9152b8",
+        "z": "4f5afa8a.0adccc",
         "name": "",
-        "group": "ca0c354e.66194",
+        "group": "2a929492.960314",
         "order": 3,
         "width": 0,
         "height": 0,
@@ -140,9 +139,9 @@
         ]
     },
     {
-        "id": "8a7de35f.e9b8e",
+        "id": "ca379da7.239608",
         "type": "change",
-        "z": "d0081a62.9152b8",
+        "z": "4f5afa8a.0adccc",
         "name": "Chart Temperature",
         "rules": [
             {
@@ -162,14 +161,14 @@
         "y": 155,
         "wires": [
             [
-                "d91f6ac9.ba3848"
+                "c337fffa.9ff0f8"
             ]
         ]
     },
     {
-        "id": "ac317282.ff5738",
+        "id": "b195e775.d8337",
         "type": "change",
-        "z": "d0081a62.9152b8",
+        "z": "4f5afa8a.0adccc",
         "name": "Chart Humidity",
         "rules": [
             {
@@ -189,14 +188,14 @@
         "y": 205,
         "wires": [
             [
-                "a1b4470.f9f37b8"
+                "83bf92da.12e9f"
             ]
         ]
     },
     {
-        "id": "d0d8083c.5a0728",
+        "id": "fc3315ad.e3ab8",
         "type": "comment",
-        "z": "d0081a62.9152b8",
+        "z": "4f5afa8a.0adccc",
         "name": "Simulated Registered Devices",
         "info": "",
         "x": 171,
@@ -204,9 +203,9 @@
         "wires": []
     },
     {
-        "id": "63d04e8f.593a7",
+        "id": "87b3117a.4d1e38",
         "type": "ui_toast",
-        "z": "d0081a62.9152b8",
+        "z": "4f5afa8a.0adccc",
         "position": "top right",
         "displayTime": "5",
         "highlight": "",
@@ -215,14 +214,14 @@
         "cancel": "",
         "topic": "",
         "name": "",
-        "x": 687,
-        "y": 342,
+        "x": 690,
+        "y": 260,
         "wires": []
     },
     {
-        "id": "b16aa8aa.80ba38",
+        "id": "aff92fff.d3c28",
         "type": "switch",
-        "z": "d0081a62.9152b8",
+        "z": "4f5afa8a.0adccc",
         "name": "Warn on High Values",
         "property": "payload.d.temp",
         "propertyType": "msg",
@@ -236,18 +235,18 @@
         "checkall": "true",
         "repair": false,
         "outputs": 1,
-        "x": 297,
-        "y": 342,
+        "x": 300,
+        "y": 260,
         "wires": [
             [
-                "2748a650.030bca"
+                "ef2c0394.810a5"
             ]
         ]
     },
     {
-        "id": "2748a650.030bca",
+        "id": "ef2c0394.810a5",
         "type": "template",
-        "z": "d0081a62.9152b8",
+        "z": "4f5afa8a.0adccc",
         "name": "Alert Msg",
         "field": "payload",
         "fieldType": "msg",
@@ -255,22 +254,50 @@
         "syntax": "mustache",
         "template": "Alert : Critical Value Detected {{payload.d.temp}}",
         "output": "str",
-        "x": 497,
-        "y": 342,
+        "x": 500,
+        "y": 260,
         "wires": [
             [
-                "63d04e8f.593a7"
+                "87b3117a.4d1e38"
             ]
         ]
     },
     {
-        "id": "36970c0b.31a074",
+        "id": "3f84807f.2d6c18",
         "type": "cloudant out",
-        "z": "d0081a62.9152b8",
+        "z": "4f5afa8a.0adccc",
         "name": "",
         "cloudant": "",
         "database": "historicaldata1",
-        "service": "cee-nodered-iot-chatbot-cloudantNoSQLDB",
+        "service": "",
+        "payonly": true,
+        "operation": "insert",
+        "x": 680,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "33e2180.dd6c4e8",
+        "type": "cloudant out",
+        "z": "4f5afa8a.0adccc",
+        "name": "",
+        "cloudant": "",
+        "database": "historicaldata2",
+        "service": "",
+        "payonly": true,
+        "operation": "insert",
+        "x": 680,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "85525cec.29f86",
+        "type": "cloudant out",
+        "z": "4f5afa8a.0adccc",
+        "name": "",
+        "cloudant": "",
+        "database": "historicaldata3",
+        "service": "",
         "payonly": true,
         "operation": "insert",
         "x": 680,
@@ -278,54 +305,26 @@
         "wires": []
     },
     {
-        "id": "8686476b.69b678",
-        "type": "cloudant out",
-        "z": "d0081a62.9152b8",
-        "name": "",
-        "cloudant": "",
-        "database": "historicaldata2",
-        "service": "cee-nodered-iot-chatbot-cloudantNoSQLDB",
-        "payonly": true,
-        "operation": "insert",
-        "x": 680,
-        "y": 500,
-        "wires": []
-    },
-    {
-        "id": "2025c62b.07f26a",
-        "type": "cloudant out",
-        "z": "d0081a62.9152b8",
-        "name": "",
-        "cloudant": "",
-        "database": "historicaldata3",
-        "service": "cee-nodered-iot-chatbot-cloudantNoSQLDB",
-        "payonly": true,
-        "operation": "insert",
-        "x": 680,
-        "y": 540,
-        "wires": []
-    },
-    {
-        "id": "bf75b257.3e6608",
+        "id": "bf1ef4de.7648b",
         "type": "switch",
-        "z": "d0081a62.9152b8",
+        "z": "4f5afa8a.0adccc",
         "name": "",
         "property": "topic",
         "propertyType": "msg",
         "rules": [
             {
                 "t": "eq",
-                "v": "simDevice_1",
+                "v": "simDeviceType_1",
                 "vt": "str"
             },
             {
                 "t": "eq",
-                "v": "simDevice_2",
+                "v": "simDeviceType_2",
                 "vt": "str"
             },
             {
                 "t": "eq",
-                "v": "simDevice_3",
+                "v": "simDeviceType_3",
                 "vt": "str"
             }
         ],
@@ -333,40 +332,40 @@
         "repair": false,
         "outputs": 3,
         "x": 470,
-        "y": 500,
+        "y": 420,
         "wires": [
             [
-                "36970c0b.31a074"
+                "3f84807f.2d6c18"
             ],
             [
-                "8686476b.69b678"
+                "33e2180.dd6c4e8"
             ],
             [
-                "2025c62b.07f26a"
+                "85525cec.29f86"
             ]
         ]
     },
     {
-        "id": "595d3a3f.545674",
+        "id": "c71b6e48.e7b52",
         "type": "function",
-        "z": "d0081a62.9152b8",
+        "z": "4f5afa8a.0adccc",
         "name": "Split Devices / Format Time Series DB",
-        "func": "// Split - iot-2/type/simDeviceType/id/simDevice_1/evt/event_1/fmt/json\n// Reset topic to simDevice_N\nvar Device = msg.topic.split(\"/\");\nmsg.topic = Device[4];\nmsg.payload = {\n        time: new Date().getTime(),\n        data: msg.payload.d.temp\n    } ;\nreturn msg;",
+        "func": "// Split - iot-2/type/simDeviceType/id/simDeviceType_1/evt/event_1/fmt/json\n// Reset topic to simDeviceType_N\nvar Device = msg.topic.split(\"/\");\nmsg.topic = Device[4];\nmsg.payload = {\n        time: new Date().getTime(),\n        data: msg.payload.d.temp\n    } ;\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "x": 230,
-        "y": 500,
+        "y": 420,
         "wires": [
             [
-                "36a9dbff.2bbdfc",
-                "bf75b257.3e6608"
+                "adf69f17.53185",
+                "bf1ef4de.7648b"
             ]
         ]
     },
     {
-        "id": "36a9dbff.2bbdfc",
+        "id": "adf69f17.53185",
         "type": "debug",
-        "z": "d0081a62.9152b8",
+        "z": "4f5afa8a.0adccc",
         "name": "",
         "active": true,
         "tosidebar": true,
@@ -374,22 +373,22 @@
         "tostatus": false,
         "complete": "true",
         "x": 470,
-        "y": 455,
+        "y": 375,
         "wires": []
     },
     {
-        "id": "ca0c354e.66194",
+        "id": "2a929492.960314",
         "type": "ui_group",
         "z": "",
         "name": "IoT Simulated Device Charts",
-        "tab": "1300625f.dc9dae",
+        "tab": "e7369856.a28f88",
         "order": 2,
         "disp": true,
         "width": "8",
         "collapse": false
     },
     {
-        "id": "1300625f.dc9dae",
+        "id": "e7369856.a28f88",
         "type": "ui_tab",
         "z": "",
         "name": "Sim IoT Data Chart",
